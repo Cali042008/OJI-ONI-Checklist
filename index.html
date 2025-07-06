@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ro" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoAlgo Codelist: Arhiva Probleme OJI & ONI</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="top-nav">
+                <h1>RoAlgo Codelist</h1>
+                <button id="theme-toggle" title="Comută tema">
+                    <i class="fas fa-sun"></i>
+                </button>
+            </div>
+            <p>O listă interactivă pentru a-ți urmări progresul în rezolvarea problemelor de la olimpiade.</p>
+        </header>
+
+        <main>
+            <!-- NOU: Secțiunea pentru Barele de Progres -->
+            <div class="progress-section">
+                <div class="progress-container">
+                    <div class="progress-label">
+                        <span>Progres OJI</span>
+                        <span id="oji-progress-text">0 / 0</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="oji-progress-fill"></div>
+                    </div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-label">
+                        <span>Progres ONI</span>
+                        <span id="oni-progress-text">0 / 0</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill oni" id="oni-progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Secțiunea de Filtre -->
+            <div class="filters">
+                <div class="filter-group">
+                    <label for="search-input">Caută după nume:</label>
+                    <input type="text" id="search-input" placeholder="Ex: lexicografic">
+                </div>
+                <div class="filter-group">
+                    <label for="year-filter">Filtrează după an:</label>
+                    <select id="year-filter">
+                        <option value="all">Toți anii</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="class-filter">Filtrează după clasă:</label>
+                    <select id="class-filter">
+                        <option value="all">Toate clasele</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="status-col">Rezolvat</th>
+                            <th>Nume Problema</th>
+                            <th>Etapa</th> <!-- NOU: Coloană pentru Etapă -->
+                            <th>An</th>
+                            <th>Clasa</th>
+                            <th>Soluție</th>
+                        </tr>
+                    </thead>
+                    <tbody id="problems-table-body">
+                        <!-- Problemele vor fi inserate aici de JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+
+        <footer>
+            <p>Realizat de Marinescu Călin.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
